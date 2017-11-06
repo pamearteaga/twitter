@@ -151,7 +151,7 @@ li{
 
 .form p{
 
-    color: grey;
+    
     display: inline-block;
 }
 
@@ -160,7 +160,7 @@ li{
 textarea{
  
     width: 96%;
-	
+	height: auto;
 	font-size: 14px;
 	border: 2px solid #35B1B1;
 	-webkit-border-radius: 10px;
@@ -235,6 +235,16 @@ button:focus{
     margin-bottom: 20px;
 }
 
+
+.red{
+
+    color: red;
+}
+
+.orange{
+
+    color: orange;
+}
 
 
 

@@ -22,59 +22,48 @@ function addTweet() {
     } else {
 
        document.getElementById("btn").disabled = false;
-       btn.classList.remove("inactive");
-
+       
        tweet.appendChild(contentTweet);
 
        divTweet.appendChild(tweet);
 
        section.appendChild(divTweet);
+
+       document.getElementById("limit").innerHTML = 140; //resetear contador
    
    }
    
+}
 
-} //addTweet
 
 
-/*
+// contador de caracteres y activar botón
+
 var textarea = document.getElementById("usertext");
 
-textarea.addEventListener("keypress", btnActive);
+textarea.onkeydown = function(){
 
+  var initialLimit = document.getElementById("limit");
 
-function btnActive(){
+  var numberChart = initialLimit.innerHTML = 140 - this.value.length;
+  
+  btn.classList.remove("inactive");
 
-    if (textarea == "") {
+   if (numberChart <= 0) {
 
-        document.getElementById("btn").disabled = true;
+      document.getElementById("btn").disabled = true;
+      btn.classList.add("inactive");
 
+   } else if (numberChart <= 20 && numberChart >= 11) {
        
+       initialLimit.classList.add("orange");
 
+   } else if (numberChart <= 10 && numberChart > 0) {
+       
+       initialLimit.classList.remove("orange");
+       initialLimit.classList.add("red");
 
-    }else{
-        
-    
-    }
-    
-}//btnActive 
-
-
-
-var textarea = document.getElementById('usertext')
-
-textarea.addEventListener("onkeyup", numberChart);
-
-function numberChart(){
-
-  document.getElementById('limit').innerHTML = 140 - this.value.length;
-};
-
-*/
-
-// número de caracteres
-
-document.getElementById("usertext").onkeyup = function () {
-  document.getElementById("limit").innerHTML = 140 - this.value.length;
+   } 
 };
 
 
