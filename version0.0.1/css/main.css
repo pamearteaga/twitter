@@ -142,11 +142,17 @@ li{
 
 }
 
-form{
+.form{
     width: 90%;
     display: inline-block;
     float: right;
 
+}
+
+.form p{
+
+    color: grey;
+    display: inline-block;
 }
 
 
@@ -154,7 +160,7 @@ form{
 textarea{
  
     width: 96%;
-	height: 50px;
+	
 	font-size: 14px;
 	border: 2px solid #35B1B1;
 	-webkit-border-radius: 10px;
@@ -166,6 +172,11 @@ textarea{
 }
 
 
+textarea:focus{
+ 
+    outline: none;
+
+}
 
 button{
     
@@ -179,10 +190,19 @@ button{
     border-radius: 30px;
     border:none;
     cursor: pointer;
-
-
+    float: right;
+    margin-top: 10px;
 
 }
+
+ 
+button:focus{
+ 
+    outline: none;
+
+}
+
+
 
 .inactive{
     
@@ -190,11 +210,6 @@ button{
 
 }
 
-.boton{
-
-	margin-top: 10px;
-	float: right;
-}
 
 
 /***** SECCION TWEETS ****/
@@ -207,14 +222,21 @@ button{
     display: inline-block;
 }
 
-#tweets p{
+#tweets div{
 
-    padding: 15px;
+    width: 95%;
+    height: auto;
+    padding: 0 20px;
     background-color: white;
     display: inline-block;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
+
+
+
+
 
 
