@@ -15,9 +15,9 @@ function addTweet() {
     var divTweet = document.createElement("div");
 
 
-    if (text.lenght == 0 || text == null) {
+    if (text.length == 0 || text == null) {
 
-       return document.getElementById("btn").disabled = true;
+       document.getElementById("btn").disabled = true;
 
     } else {
 
