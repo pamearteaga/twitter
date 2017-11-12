@@ -160,14 +160,14 @@ li{
 textarea{
  
     width: 96%;
-	height: auto;
+	
 	font-size: 14px;
 	border: 2px solid #35B1B1;
 	-webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
     padding: 10px;
-    resize: vertical;
+    overflow: visible;
 
 }
 
@@ -224,7 +224,7 @@ button:focus{
 
 #tweets div{
 
-    width: 95%;
+    width: 100%;
     height: auto;
     padding: 0 20px;
     background-color: white;

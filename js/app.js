@@ -9,10 +9,25 @@ function addTweet() {
     
     var text = document.getElementById("usertext").value;
     document.getElementById("usertext").value = "";
+
     var tweet = document.createElement("p");
     var contentTweet = document.createTextNode(text);
     var section = document.getElementById("tweets");
     var divTweet = document.createElement("div");
+
+    /*
+    var hourTweet = document.createElement("div")
+    hourTweet.setAttribute("id", "hora");
+
+
+    var hour = function postHour(){
+                        var fecha= new Date()
+                        var horas= fecha.getHours()
+                        var minutos = fecha.getMinutes()
+ 
+                 document.write(horas + ":" + minutos + ":" + segundos)
+                    }
+     var hourCont = document.createTextNode(hour);*/
 
 
     if (text.length == 0 || text == null) {
@@ -29,7 +44,10 @@ function addTweet() {
 
        section.appendChild(divTweet);
 
+
+
        document.getElementById("limit").innerHTML = 140; //resetear contador
+
    
    }
    
@@ -63,10 +81,22 @@ textarea.onkeydown = function(){
        initialLimit.classList.remove("orange");
        initialLimit.classList.add("red");
 
-   } 
+   } else if (numberChart >= 19 && numberChart <= 140){
+
+       initialLimit.classList.remove("orange");
+       initialLimit.classList.remove("red");
+   }
 };
 
 
+// REZISE AUTOMATICO
+
+var maxHeight = 150; 
+
+textarea.oninput = function() {
+  textarea.style.height = ""; 
+  textarea.style.height = Math.min(textarea.scrollHeight, maxHeight) + "px";
+};
 
 
 
