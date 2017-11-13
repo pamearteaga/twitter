@@ -1,4 +1,5 @@
 
+/* ESTILOS GENERALES*/
 
 body{
     
@@ -19,7 +20,9 @@ a:hover{
 }
 
 
-header{
+
+
+header{  /* header con logo*/
     
     padding: 7px 48%;
 	background-color: white;
@@ -36,13 +39,16 @@ header img{
     
 }
 
-main{
+main{  /* contiene los elementos */
 
 	padding: 5% 10% 0;
 
 }
 
-#user{
+
+/****** ESTILOS EL PERFIL DE USUARIO *****/
+
+#user{  
 
 	width: 25%;
 	height: auto;
@@ -121,9 +127,9 @@ li{
 }
 
 
+/****** ESTILOS DE LA SECCIÓN PARA AGREGAR NUEVOS TWEETS *****/
 
-
-#input-tweet{
+#input-tweet{ /* contenedor de textarea */
 
     width: 65%;
     height: auto;
@@ -160,13 +166,14 @@ li{
 textarea{
  
     width: 96%;
-	
+    height: 20px;
 	font-size: 14px;
 	border: 2px solid #35B1B1;
 	-webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
     padding: 10px;
+    resize: none;
     overflow: visible;
 
 }
@@ -212,7 +219,7 @@ button:focus{
 
 
 
-/***** SECCION TWEETS ****/
+/***** SECCION TWEETS NUEVOS ****/
 
 #tweets{
 
@@ -236,16 +243,25 @@ button:focus{
 }
 
 
-.red{
+.red{ /* color rojo para el contador de caracteres */
 
     color: red;
 }
 
-.orange{
+.orange{ /* color naranjo para el contador de caracteres */
 
     color: orange;
 }
 
+#tweets .hora{ /* estilo para el div que contiene la hora */
+
+    color: teal;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 0;
+    display: inline-block;
+    margin: 0;
+}
 
 
 
